@@ -40,3 +40,44 @@ let questionsList = [
         a: 'Ordered List of Values'
     }
 ];   
+//the elements that wont change (the score total and amount of questions)
+const score_points = 80
+const max_questions = 4
+
+startPageElem = document.getElementById('home');
+//functions - telling the game to start game and start timer
+startGame = () => {
+    startPageElem.setAttribute('class', 'hidden');
+    questionsElem.removeAttribute('class');
+    timer = setInterval(tick, 1000);
+    remaintingtimeElem.textContent = time;
+
+}
+
+function saveInitials () {
+    //to be coded
+}
+
+function saveScore () {
+    //to be coded
+}
+
+function tick () {
+    time -- ; 
+    remaintingtimeElem.textContent = time;
+    if (time <= 0 ){
+    endQuiz ();
+    }
+}
+function endQuiz () {
+    clearInterval(timer);
+    endscreenElem.removeAttribute('class');
+    finalScoreElem.textContent = time;
+    questionsElem.setAttribute('class', 'hidden');
+}
+
+startBtn.onclick = startGame;
+
+playersInitialsElem.onkeyup = saveInitials;
+
+submitInitialsBtn.onclick = saveScore;
