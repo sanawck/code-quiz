@@ -4,34 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
-<!--stylesheet-->
-    <link rel="stylesheet" href="./style.css">
+    <!--stylesheet-->
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <!--main screen content-->
 <body>
- <div class="high-score">View High Scores</div>
- <div class="timer">Time Remaining: <span id="remaining-time">0</span></div>
+  <!-- <div class="high-score">View High Scores</div> -->
+  <div class="timer">Time Remaining: <span id="remaining-time">0</span></div>
 
-<div class="container">
+  <div class="container">
     <div id="home" class="flex-column flex-center">
-     <h1>Code Quiz</h1>
-    <button class="btn" id="start-button">Start Game</button>
+      <h1>Code Quiz</h1>
+      <button class="btn" id="start-button">Start Game</button>
     </div>
-  <div id="questions" class="hidden">
-      <h2 id="question-asked"></h2>
-      <div id="multichoices" class="multichoices"></div>
+
+    <div id="questions" class="hidden">
+        <h2 id="question-asked"></h2>
+        <ul id="multichoices" class="multichoices">
+          <li class="answer"><button class="btn" id="option1">Answer 1</button></li>
+          <li class="answer"><button class="btn" id="option2">Answer 2</button></li>
+          <li class="answer"><button class="btn" id="option3">Answer 3</button></li>
+        </ul>
+        <h3 id="rightWrong"></h3>
+    </div>
+  
   </div>
-  </div>
+
+
   <div id="endscreen" class="hidden">
-      <h2>Quiz Over</h2>
+      <h2>Quiz Over! Good Job</h2>
       <p>Final Score is: <span id="final-score"></span></p>
-     <p>Enter Initials: <input type="text" id="players-initials">
-    <button id="submit-initials">Submit Initials</button></p> 
+      <form>
+      <p>Enter Initials: <input type="text" id="players-initials" placeholder="enter initials">
+    <button id="submit-initials">Submit</button></p></form>
+    <button type ="submit" class="save-btn" id="saveScoreBtn" onclick="saveHighScore"(event)>View High Scores</button>
+    
+
   </div>
 
  <div id="answer-accuracy" class="answer-accuracy hidden">
   
 </div>
-<script src="./js/index.js"></script>    
+<script src="./js/index.js"></script>  
 </body>
 </html>
