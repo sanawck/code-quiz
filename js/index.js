@@ -1,3 +1,4 @@
+//timer variables 
 let timer ; 
 let questionIndex = 0;
 let time = 60;
