@@ -138,6 +138,5 @@ function endQuiz () {
 // EVENT LISTNERS
 startBtn.onclick = startGame;
 playersInitialsElem.onkeyup = saveInitials;
-submitInitialsBtn.onclick = saveScore;
 choiceElem.addEventListener('click', chooseAnswer)
 choiceElem.addEventListener('click', chooseAnswer)
