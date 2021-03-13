@@ -13,3 +13,30 @@ let answerAccuracyElem = document.getElementById('answer-accuracy');
 let remaintingtimeElem = document.getElementById('remaining-time');
 let endscreenElem = document.getElementById('endscreen');
 let finalScoreElem = document.getElementById('finalscore');
+
+let questionsList = [
+    {
+        question: 'What does HTML stand for?',
+        choices:['Hyper Text Markup Logo', 'Hyper Text Markup Language', 'Hyper Markup Text Language'],
+        a: 'Hyper Text Markup Language'
+    },
+        
+    {
+        question: 'What does CSS stand for',
+        choices: ['Cascading Style Sheet', 'Cascading Section Style', 'C++'],
+        a: 'Cascading Style Sheet'
+        
+    },
+
+    {   
+        question: 'Which format is acceptable to create a variable in Javascipt',
+        choices :['HTML', 'let', '.*'],
+        a:'let'
+
+    },
+    {
+        question: 'What is an array in Javascript?',
+        choices: ['Ordered List of Values','class id', 'Boolean'],
+        a: 'Ordered List of Values'
+    }
+];   
